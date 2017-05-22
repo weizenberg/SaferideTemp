@@ -52,6 +52,7 @@
     "compression": "^1.6.2",
     "cors": "^2.7.1",
     "dotenv": "^4.0.0",
+    "dotenv-safe": "^4.0.4",
     "elasticsearch": "^13.0.1",
     "express": "^4.13.4",
     "lodash": "^4.13.1",
