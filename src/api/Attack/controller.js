@@ -14,6 +14,6 @@ export const create = ({ body }, res, next) => {
 };
 
 export const createCommand = ({ body, params }, res, next) => {
-  sendCommand = body;
+  sendCommand = body.attack;
   res.status(200).json(sendCommand);
 };
