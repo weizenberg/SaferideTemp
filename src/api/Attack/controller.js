@@ -1,7 +1,7 @@
 
 var log4js = require('log4js');
 
-var sendCommand = false;
+var sendCommand = 0;
 
 export const create = ({ body }, res, next) => {
   var log = log4js.getLogger('info');
@@ -10,10 +10,10 @@ export const create = ({ body }, res, next) => {
   require('log4js-elasticsearch').flushAll(true);
 
   res.status(201).json(sendCommand)
-  sendCommand = false;
+  sendCommand = 0;
 };
 
 export const createCommand = ({ body, params }, res, next) => {
-  sendCommand = true;
+  sendCommand = body;
   res.status(200).json(sendCommand);
 };
